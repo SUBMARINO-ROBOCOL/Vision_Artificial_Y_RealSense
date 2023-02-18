@@ -3,11 +3,11 @@ import numpy as np
 
 class DepthCamera:
     def __init__(self):
-        # Configure depth and color streams
+        # Configura las transmisiones de color y profundidad
         self.pipeline = rs.pipeline()
         config = rs.config()
 
-        # Get device product line for setting a supporting resolution
+        # Capta las especificaciones de la cámara para ajustar una resolución soportada
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
         pipeline_profile = config.resolve(pipeline_wrapper)
         device = pipeline_profile.get_device()
@@ -18,7 +18,7 @@ class DepthCamera:
 
 
 
-        # Start streaming
+        # Empieza la transmisión de video
         self.pipeline.start(config)
 
     def get_frame(self):
