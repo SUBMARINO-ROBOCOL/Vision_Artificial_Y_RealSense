@@ -10,7 +10,7 @@ while True:
     ret, depth_frame, color_frame = dc.get_frame ()
     #point determina las coordenadas de la pantalla, siendo la esquina superior izquierda el origen
     #Se usa (250,250) porque la ventana que abre es de 500x500 px   
-    point = (400, 300)
+    point = (250, 250)
     cv2.circle(color_frame, point, 4, (0, 0, 255))
     distance = depth_frame [point[1], point [0]]
     print (distance) 
