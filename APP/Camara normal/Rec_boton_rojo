@@ -1,5 +1,11 @@
 import cv2
 
+#######################################################################
+#                                                                     #
+# NO CORRER ESTE CÓDIGO, ESTÁ INCOMPLETO Y ENTRA EN UN LOOP INIFINITO #
+#                                                                     #
+#######################################################################
+
 net = cv2.dnn.readnet()
 captura = cv2.VideoCapture(0)
 
